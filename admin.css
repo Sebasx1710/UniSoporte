@@ -1,0 +1,83 @@
+.page-heading {
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap: 20px;
+}
+
+
+.admin-security {
+
+    background:
+        #fff8e8;
+
+    border:
+        1px solid
+        #f3d79a;
+
+    border-radius:
+        10px;
+
+    padding:
+        15px;
+
+    margin-bottom:
+        18px;
+}
+
+
+.usuario-estado {
+
+    display:
+        inline-block;
+
+    padding:
+        5px 9px;
+
+    border-radius:
+        999px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+}
+
+
+.usuario-activo {
+
+    background:
+        #e8f7ed;
+
+    color:
+        #16743b;
+}
+
+
+.usuario-inactivo {
+
+    background:
+        #fdecec;
+
+    color:
+        #b42318;
+}
+
+
+@media(max-width: 700px) {
+
+    .page-heading {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+    }
+}

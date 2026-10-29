@@ -1,0 +1,124 @@
+.tecnico-stats {
+    grid-template-columns:
+        repeat(3, 1fr);
+}
+
+
+.atencion-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.ticket-atencion {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 4px 18px
+        rgba(15,23,42,.06);
+
+    border-top:
+        4px solid
+        var(--primario);
+}
+
+
+.ticket-header {
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+.ticket-code {
+    display: block;
+
+    color:
+        var(--primario-claro);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    margin-bottom: 5px;
+}
+
+
+.ticket-info {
+    background:
+        #f8fafc;
+
+    border-radius:
+        9px;
+
+    padding: 13px;
+
+    margin-bottom: 15px;
+}
+
+
+.ticket-info p {
+    margin: 4px 0;
+
+    font-size: 13px;
+}
+
+
+.ticket-description {
+    color:
+        var(--texto-secundario);
+
+    line-height: 1.6;
+
+    padding-bottom: 18px;
+
+    margin-bottom: 18px;
+
+    border-bottom:
+        1px solid
+        var(--borde);
+}
+
+
+.solucion-group {
+    margin-top: 25px;
+}
+
+
+.solution-cell {
+    max-width: 250px;
+}
+
+
+@media(max-width: 900px) {
+
+    .atencion-grid {
+        grid-template-columns:
+            1fr;
+    }
+}
+
+
+@media(max-width: 700px) {
+
+    .tecnico-stats {
+        grid-template-columns:
+            1fr;
+    }
+}

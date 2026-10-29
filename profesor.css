@@ -1,0 +1,21 @@
+/* =========================================
+   PANEL DEL PROFESOR
+   ========================================= */
+
+#seccion-nueva .panel {
+    border-top:
+        4px solid
+        var(--primario);
+}
+
+
+#seccion-solicitudes table tbody tr:hover {
+    background:
+        #fafcff;
+}
+
+
+#seccion-historial .panel {
+    max-width:
+        950px;
+}
