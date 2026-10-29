@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        UniSoporte | Acceso
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/login.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<main class="login-page">
+
+
+    <section class="login-container">
+
+
+        <!-- ==================================
+             PANEL INFORMATIVO
+             ================================== -->
+
+
+        <div class="login-info">
+
+
+            <div class="logo">
+                US
+            </div>
+
+
+            <h1>
+                UniSoporte
+            </h1>
+
+
+            <p>
+                Sistema de Gestión de Solicitudes
+                de Soporte IT
+            </p>
+
+
+            <div class="info-box">
+
+                <h3>
+                    Soporte tecnológico universitario
+                </h3>
+
+                <p>
+                    Registra, consulta y realiza
+                    seguimiento a las solicitudes
+                    de soporte tecnológico.
+                </p>
+
+            </div>
+
+
+            <div class="security-box">
+
+                <strong>
+                    Acceso seguro
+                </strong>
+
+                <p>
+                    El acceso al sistema está
+                    controlado según el rol de
+                    cada usuario.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ==================================
+             PANEL DERECHO
+             ================================== -->
+
+
+        <div class="login-form-container">
+
+
+            <!-- ==============================
+                 LOGIN
+                 ============================== -->
+
+
+            <div
+                id="vistaLogin"
+                class="auth-view active"
+            >
+
+
+                <div class="login-header">
+
+                    <span class="welcome">
+                        Bienvenido
+                    </span>
+
+                    <h2>
+                        Iniciar sesión
+                    </h2>
+
+                    <p>
+                        Ingrese sus credenciales
+                        para acceder al sistema.
+                    </p>
+
+                </div>
+
+
+                <form id="formLogin">
+
+
+                    <div class="form-group">
+
+                        <label for="usuario">
+                            Usuario
+                        </label>
+
+                        <input
+                            type="text"
+                            id="usuario"
+                            placeholder="Ingrese su usuario"
+                            autocomplete="username"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Contraseña
+                        </label>
+
+
+                        <div class="password-container">
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Ingrese su contraseña"
+                                autocomplete="current-password"
+                            >
+
+                            <button
+                                type="button"
+                                class="btn-password"
+                                id="btnMostrarLogin"
+                                title="Mostrar contraseña"
+                            >
+                                Ver
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="mensajeError"
+                        class="mensaje-error"
+                    >
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-login"
+                    >
+                        Iniciar sesión
+                    </button>
+
+
+                </form>
+
+
+                <div class="register-link">
+
+                    <span>
+                        ¿No tienes una cuenta?
+                    </span>
+
+                    <button
+                        type="button"
+                        id="btnIrRegistro"
+                        class="link-button"
+                    >
+                        Crear cuenta
+                    </button>
+
+                </div>
+
+
+                <div class="login-footer">
+
+                    <span>
+                        UniSoporte
+                    </span>
+
+                    <p>
+                        Plataforma universitaria
+                        de soporte IT
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==============================
+                 REGISTRO
+                 ============================== -->
+
+
+            <div
+                id="vistaRegistro"
+                class="auth-view"
+            >
+
+
+                <div class="login-header">
+
+                    <span class="welcome">
+                        REGISTRO DE USUARIO
+                    </span>
+
+                    <h2>
+                        Crear cuenta
+                    </h2>
+
+                    <p>
+                        El registro público está
+                        disponible únicamente para
+                        profesores universitarios.
+                    </p>
+
+                </div>
+
+
+                <div class="role-notice">
+
+                    <strong>
+                        Cuenta de Profesor
+                    </strong>
+
+                    <p>
+                        Las cuentas de técnicos y
+                        administradores son creadas
+                        únicamente por personal
+                        autorizado.
+                    </p>
+
+                </div>
+
+
+                <form id="formRegistro">
+
+
+                    <div class="form-group">
+
+                        <label for="registroNombre">
+                            Nombres y apellidos *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="registroNombre"
+                            placeholder="Ej. Juan Pérez García"
+                            maxlength="100"
+                            autocomplete="name"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registroCorreo">
+                            Correo electrónico *
+                        </label>
+
+                        <input
+                            type="email"
+                            id="registroCorreo"
+                            placeholder="Ej. nombre@gmail.com"
+                            maxlength="120"
+                            autocomplete="email"
+                        >
+
+                        <small>
+                            Recibirás un código para verificar
+                            que tienes acceso a este correo.
+                        </small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registroUsuario">
+                            Usuario *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="registroUsuario"
+                            placeholder="Cree un nombre de usuario"
+                            maxlength="30"
+                            autocomplete="username"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registroPassword">
+                            Contraseña *
+                        </label>
+
+                        <div class="password-container">
+
+                            <input
+                                type="password"
+                                id="registroPassword"
+                                placeholder="Mínimo 6 caracteres"
+                                autocomplete="new-password"
+                            >
+
+                            <button
+                                type="button"
+                                class="btn-password"
+                                id="btnMostrarRegistro"
+                            >
+                                Ver
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="registroConfirmar">
+                            Confirmar contraseña *
+                        </label>
+
+                        <input
+                            type="password"
+                            id="registroConfirmar"
+                            placeholder="Repita su contraseña"
+                            autocomplete="new-password"
+                        >
+
+                    </div>
+
+
+                    <div
+                        id="mensajeRegistro"
+                        class="form-message"
+                    >
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-login"
+                        id="btnCrearCuenta"
+                    >
+                        Continuar y verificar correo
+                    </button>
+
+
+                </form>
+
+
+                <div class="register-link">
+
+                    <span>
+                        ¿Ya tienes una cuenta?
+                    </span>
+
+                    <button
+                        type="button"
+                        id="btnVolverLogin"
+                        class="link-button"
+                    >
+                        Iniciar sesión
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==============================
+                 VERIFICACIÓN DE CORREO
+                 ============================== -->
+
+
+            <div
+                id="vistaVerificacion"
+                class="auth-view"
+            >
+
+
+                <div class="login-header">
+
+                    <span class="welcome">
+                        SEGURIDAD
+                    </span>
+
+                    <h2>
+                        Verifica tu correo
+                    </h2>
+
+                    <p>
+                        Hemos enviado un código de
+                        seguridad de 6 dígitos.
+                    </p>
+
+                </div>
+
+
+                <div class="role-notice">
+
+                    <strong>
+                        Código enviado
+                    </strong>
+
+                    <p>
+                        Revisa la bandeja de entrada
+                        del siguiente correo:
+                    </p>
+
+                    <p
+                        id="correoVerificacion"
+                        style="font-weight: bold;"
+                    >
+                        ---
+                    </p>
+
+                </div>
+
+
+                <form id="formVerificacion">
+
+
+                    <div class="form-group">
+
+                        <label for="codigoVerificacion">
+                            Código de verificación *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="codigoVerificacion"
+                            placeholder="000000"
+                            maxlength="6"
+                            inputmode="numeric"
+                            autocomplete="one-time-code"
+                        >
+
+                        <small>
+                            El código tendrá una vigencia
+                            de 10 minutos.
+                        </small>
+
+                    </div>
+
+
+                    <div
+                        id="mensajeVerificacion"
+                        class="form-message"
+                    >
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn-login"
+                        id="btnVerificarCodigo"
+                    >
+                        Verificar y crear cuenta
+                    </button>
+
+
+                </form>
+
+
+                <div class="register-link">
+
+                    <span>
+                        ¿No recibiste el código?
+                    </span>
+
+                    <button
+                        type="button"
+                        id="btnReenviarCodigo"
+                        class="link-button"
+                    >
+                        Reenviar código
+                    </button>
+
+                </div>
+
+
+                <div class="register-link">
+
+                    <button
+                        type="button"
+                        id="btnCambiarCorreo"
+                        class="link-button"
+                    >
+                        Cambiar correo o datos
+                    </button>
+
+                </div>
+
+
+                <div class="login-footer">
+
+                    <span>
+                        UniSoporte
+                    </span>
+
+                    <p>
+                        Verificación de identidad
+                        por correo electrónico
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- MODELOS -->
+
+<script src="js/modelos/Usuario.js"></script>
+
+<script src="js/modelos/Solicitud.js"></script>
+
+
+
+<!-- CORE -->
+
+<script src="js/core/storage.js"></script>
+
+<script src="js/core/session.js"></script>
+
+<script src="js/core/seed.js"></script>
+
+
+
+<!-- CONTROLADOR -->
+
+<script src="js/controladores/AuthController.js"></script>
+
+
+
+<!-- VISTA -->
+
+<script src="js/vistas/login.js"></script>
+
+
+</body>
+
+</html>
